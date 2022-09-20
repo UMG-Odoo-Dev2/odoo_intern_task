@@ -1,7 +1,4 @@
-x = 6j
 
-#display x:
-print(x)
+class Vehicle:
+    pass
 
-#display the data type of x:
-print(type(x)) 
