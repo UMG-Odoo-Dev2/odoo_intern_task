@@ -1,0 +1,34 @@
+Git Commands
+
+Configures the user
+-------------------
+git config --global user.name "Ye Zaw Oo"
+git config --global user.email "yezawoo.cp.431@gmail.com"
+
+
+git clone <Repo URL>
+git clone <Repo URL> --single-branch --branch="branch name"
+
+
+git add <File Path>
+git add .
+
+
+git commit -m "commit message"
+
+
+Displays state of working directory and staging area
+----------------------------------------------------
+git status
+
+
+git log
+
+git branch
+git checkout <branch name>
+
+
+git push origin <branch name>
+git pull origin <branch name>
+
+
