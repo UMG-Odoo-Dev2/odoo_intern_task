@@ -1,0 +1,5 @@
+t = (1, 2, 3, 4, 5, 7)
+print('len()       = ', len(t))
+print('max()       = ', max(t))
+print('min()       = ', min(t))
+print('tuple(seq)  = ', tuple([1, 2, 3, 4, 5, 6]))
