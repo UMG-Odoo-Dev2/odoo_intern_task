@@ -14,6 +14,5 @@
 6. Use spaces around operators and after commas, but not directly inside bracketing constructs:
 7. Naming Conventions 
 8. Characters that should not be used for identifiers 
-12. Don’t use non-ASCII characters in identifiers
-13. Name your classes and functions consistently
-14. 
+9. Don’t use non-ASCII characters in identifiers
+10. Name your classes and functions consistently
