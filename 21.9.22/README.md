@@ -27,4 +27,20 @@
 9. Don’t use non-ASCII characters in identifiers
 
 # What is Framework?
-A framework is a collection of modules or packages which helps in writing web applications.
+- A framework is a collection of modules or packages which helps in writing web applications.
+- Frameworks make it easier to reuse the code for common HTTP operations. 
+- By using framework, other developers with the knowledge of this framework can easily maintain and build the application.
+
+### Three Types of Framework
+- Micro-framework
+- Full-stack framework
+- Asynchronous Framework
+
+### Top 5 Frameworks In Python
+- Django(full-stack framework)
+   - ***main databases that django works:  PostgreSQL, MySQL, SQLite, Oracle*** 
+   - ***It can also work with other databases using the third party drivers.***
+- Web2Py(full-stack framework)
+- Flask(micro-framework)
+- Bottle(micro-framework)
+- CherryPy(open-source framework)
