@@ -6,13 +6,14 @@
    - ***This 4 space rule is not always mandatory***
 2. Use docstrings
    - ***There are both single and multi-line docstrings that can be used in Python*** 
-4. Wrap lines so that they don’t exceed 79 characters 
-5. Use of regular and updated comments 
+3. Wrap lines so that they don’t exceed 79 characters 
+4. Use of regular and updated comments 
    - ***Block comments and inline comments can be written by single ‘#’***
-7. Use of trailing commas 
-8. Use spaces around operators and after commas, but not directly inside bracketing constructs:
-9. Naming Conventions 
-10. Characters that should not be used for identifiers 
-11. Don’t use non-ASCII characters in identifiers
-12. Name your classes and functions consistently
-13. 
+5. Use of trailing commas 
+   - ***This is not mandatory except while making a tuple***
+6. Use spaces around operators and after commas, but not directly inside bracketing constructs:
+7. Naming Conventions 
+8. Characters that should not be used for identifiers 
+12. Don’t use non-ASCII characters in identifiers
+13. Name your classes and functions consistently
+14. 
