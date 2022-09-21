@@ -5,7 +5,7 @@
 -  Importance of PEP will include Naming Convention, Code Layout, DocString, Comments and Commas
 
 # Types of Framework in Python
-> Three main types of frameworks in Python
+> Three Main Types of Framework in Python
  1. Full-Stack Framework
  2. Microframework
  3. Asynchronous Framework
