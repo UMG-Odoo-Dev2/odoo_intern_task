@@ -1,0 +1,14 @@
+a = 2 ** 3
+b = 22 % 8
+c = 22 // 8
+d = 22 / 8
+e = 3 * 5
+f = 5 - 2
+g = 2 + 2
+print('2 ** 3 = ', a , type(a))
+print('22 % 8 = ', b, type(b))
+print('22 // 8 = ', c, type(c))
+print('22 / 8 = ', d, type(d))
+print('3 * 5 = ', e, type(e))
+print('5 - 2 = ', f, type(f))
+print('2 + 2 = ', g, type(g))
