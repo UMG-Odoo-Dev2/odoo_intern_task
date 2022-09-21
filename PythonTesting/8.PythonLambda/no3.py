@@ -1,4 +1,7 @@
-def myfunc(n):
-    return lambda a:a*n
-mydoubler=myfunc(2)
-print(mydoubler(11))
+try:
+    a=int(input("Enter a:"))
+    b=int(input("Enter b:"))
+    c=a/b
+    print(c)
+except Exception:
+    print("Can't divide by zero,Please use b as greater than zero!")
