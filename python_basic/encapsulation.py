@@ -6,4 +6,4 @@ class Robot(object):
 obj=Robot()
 print(obj.a)
 print(obj._b)  
-print(obj.__c)      
+print(obj.__c)       
