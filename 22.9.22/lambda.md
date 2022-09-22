@@ -26,7 +26,6 @@ lambda arguments: expression
 ## Using lambda() Function with filter()
 - filter() function takes in a function and a list as arguments.
 - The function is called with all the items in the list and a new list is returned which contains items for which the function evaluates to True.
-
 - Example:
 ```
 my_list = [1, 5, 4, 6, 8, 11, 3, 12]
