@@ -1,4 +1,5 @@
 from bz2 import compress
+from operator import ge
 from turtle import st
 
 
@@ -9,14 +10,17 @@ class CompressedGene:
     def _compress(self, gene: str) -> None:
         self.bit_string: int = 1
         for nucleotide in gene.upper():
+            # print(nucleotide)
             self.bit_string <<= 2
+            # print(self.bit_string)
             if nucleotide == "A":
                 self.bit_string |= 0b00
-            elif nucleotide == "C":
+                print(self.bit_string)
+            elif nucleotide == "B":
                 self.bit_string |= 0b01
-            elif nucleotide == "G":
+            elif nucleotide == "C":
                 self.bit_string |= 0b10
-            elif nucleotide == "T":
+            elif nucleotide == "D":
                 self.bit_string |= 0b11
             else:
                 raise ValueError("Invalid Nucleotide:{}".format(nucleotide))
@@ -27,12 +31,16 @@ class CompressedGene:
             bits: int = self.bit_string >> i & 0b11
             if bits == 0b00:
                 gene += "A"
+                print(gene)
             elif bits == 0b01:
-                gene += "C"
+                gene += "B"
+                print(gene)
             elif bits == 0b10:
-                gene += "G"
+                gene += "C"
+                print(gene)
             elif bits == 0b11:
-                gene += "T"
+                gene += "D"
+                print(gene)
             else:
                 raise ValueError("Invalid bits:{}".format(bits))
         return gene[::-1]
@@ -42,7 +50,7 @@ class CompressedGene:
 
 if __name__ == "__main__":
     from sys import getsizeof
-    original: str = "TGACZ" * 100
+    original: str = "abcd"
     print("Original is {} bytes".format(getsizeof(original)))
     compressed: CompressedGene = CompressedGene(original)
     print("compressed is {} bytes".format(getsizeof(compressed.bit_string)))
