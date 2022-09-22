@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # PEP
 ## Python Enhancement Proposal
 > - PEP 8 exists to improve the readability and consistency of Python code.
@@ -13,3 +14,6 @@
 3. To break before binary operators if line breaking needs to occur around binary operators, like + and * .
 ### Identation
 > - Tell the Python what code to execute when the function is called or what code belongs to be a class.
+=======
+
+>>>>>>> fd459fd8cb318d11f15383bb45463a47234d86b1
