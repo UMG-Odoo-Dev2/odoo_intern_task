@@ -1,5 +1,3 @@
-# odoo_intern_test
-
 ## PEP
 - Python Enterprise Proposal
 - A design document that provides various guidelines to write the readable in **Python**
@@ -28,20 +26,4 @@
     #### 5. Put the Closing Braces
     #### 6. Comments
     #### 7. Avoid Unnecessay White Spaces
-
----
-    
-## Types of Python Framework
-- The framework is a collection of modules and packages
-- Using Python frameworks helps reducing development time as it provides a prebuilt implementation of redundant tasks
-- There are majorly three types of frameworks as follows
-  #### 1. Full Stack Framework
-  #### 2. Micro Framework
-  #### 3. Asynchronous Framework
-
-### Top Python Frameworks
-1. Bottle
-2. Django
-3. Web2Py
-4. Flask
-5. CherryPy
+    #### 8. Programming Recommendation

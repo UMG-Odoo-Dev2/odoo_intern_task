@@ -11,3 +11,15 @@ sec_list=["yellow","pink","black","blue"]
 #print(set(first_list))
 #print(set(sec_list))
 print("Result List: ",remove_list(first_list,sec_list))
+
+
+def remove_common(a, b):
+    c,d = list(set(a).difference(b)), list(set(b).difference(a))
+    c.extend(d)
+    print(c)
+ 
+if __name__ == "__main__":
+    a = [1, 2, 3, 4, 5]
+    b = [4, 5, 6, 7, 8]
+ 
+    remove_common(a, b)
