@@ -16,3 +16,13 @@ print((lambda p, q, r : q + q + r)(13,25,18))
 #Filter in Lambda
 karma = list(filter(lambda w : 'K' in w, ["Kilo","Milo","Pilo"]))
 print(karma)
+
+#How to merge two dicts 
+m = {'a': 1 , 'b': 2}
+n = {'b': 3 , 'c': 4}
+o = {**m, **n}
+print(o,type(o))
+
+#High Order Functon
+high_ord = lambda x, func : x + func(x)
+print(high_ord(2, lambda x: x * 3))
