@@ -1,13 +1,10 @@
 # Python Lambda Functions
 - They are anonymous function
-- As we already know that the <span style="color:green;font-weight:700;font-size:15px">def keyword</span> is used to define a normal function in Python. 
-- Similarly, the 
-<span style="color:green;font-weight:700;font-size:15px">
-   lambda keyword
-</span> is used to define an anonymous function in Python.
+- As we already know that the def keyword is used to define a normal function in Python. 
+- Similarly, the lambda keyword is used to define an anonymous function in Python.
 
 ## Python Lambda Function Syntax
-<span style="color:green;font-weight:700;font-size:15px">Syntax: </span>
+Syntax: 
 ```
 lambda arguments: expression
 ```
