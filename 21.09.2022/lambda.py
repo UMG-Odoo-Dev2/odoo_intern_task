@@ -11,7 +11,7 @@
 # print(mydoubler(10))  #20
 # print(mytripler(10))  #30
 
-# y=(lambda x: x + 1)(2)
+# y=(lambda x: x + 1)(2) # IIFE (Immediately invoked function expression)
 # print(y)                  #3
 
 #print((lambda x, y: x+y)(2,3)) #5

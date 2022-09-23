@@ -1,3 +1,5 @@
+from bz2 import decompress
+
 class CompressedGene:
     def __init__(self,gene:str)->None:
         self._compress(gene)
@@ -9,16 +11,17 @@ class CompressedGene:
             if nucleotide == "A":
                 self.bit_string |= 0b00
             elif nucleotide == "C":
-                set.bit_string |= 0b01
+                self.bit_string |= 0b01
             elif nucleotide == "G":
-                set.bit_string |= 0b10
+                self.bit_string |= 0b10
             elif nucleotide == "T":
-                set.bit_string |= 0b11
+                self.bit_string |= 0b11
             else:
                 raise ValueError("Invalid Nucleotide:{}".format(nucleotide))
 
     def decompress(self) -> str:
         gene: str=""
+        
         for i in range (0, self.bit_string.bit_length() - 1,2):
             bits: int = self.bit_string >> i & 0b11
             if bits == 0b00:
@@ -38,10 +41,18 @@ class CompressedGene:
 
 if __name__ == "__main__":
     from sys import getsizeof
-    original:str = "TAGGg" *100
+    original:str = "TAGGC"
     print ( "orginal is {} bytes".format(getsizeof(original)))
     compressed: CompressedGene = CompressedGene(original)
+    print(bin(compressed.bit_string))
     print ("compressed is {} bytes".format(getsizeof(compressed.bit_string)))
     print (compressed)
+    
+    decompress: CompressedGene = CompressedGene(original)
+    print(bin(decompress.bit_string))
+    print(decompress)
+    print("decompressd is {} bytes".format(getsizeof(decompress.decompress())))
+
+
     print ("original and decompressed are the same: {}".format(original == 
                                                     compressed.decompress()))
