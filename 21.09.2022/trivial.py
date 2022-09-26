@@ -41,7 +41,7 @@ class CompressedGene:
 
 if __name__ == "__main__":
     from sys import getsizeof
-    original:str = "TAGGC"
+    original:str = "TAGGG"
     print ( "orginal is {} bytes".format(getsizeof(original)))
     compressed: CompressedGene = CompressedGene(original)
     print(bin(compressed.bit_string))

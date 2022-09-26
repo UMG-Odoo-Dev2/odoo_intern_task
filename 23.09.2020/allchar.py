@@ -8,7 +8,7 @@ class CompressedGene:
     def _compress(self,gene:str)->None:
         self.bit_string: int=1
         for nucleotide in gene.upper():
-            self.bit_string <<= 2
+            self.bit_string <<= 4
             if nucleotide == "A":
                 self.bit_string |= 0b00000
             elif nucleotide == "B":
@@ -68,7 +68,7 @@ class CompressedGene:
         gene: str=""
         
         for i in range (0, self.bit_string.bit_length() - 1,2):
-            bits: int = self.bit_string >> i & 0b11001
+            bits: int = self.bit_string >> i & 0b11
             if bits == 0b00000:
                 gene += "A"
             elif bits == 0b00001:
@@ -130,7 +130,7 @@ class CompressedGene:
 
 if __name__ == "__main__":
     from sys import getsizeof
-    original:str = "ABCD"
+    original:str = "AABA"
     print ( "orginal is {} bytes".format(getsizeof(original)))
     compressed: CompressedGene = CompressedGene(original)
     print(bin(compressed.bit_string))
