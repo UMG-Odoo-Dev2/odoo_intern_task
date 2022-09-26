@@ -1,7 +1,8 @@
-from bz2 import compress
+from bz2 import compress, decompress
 from operator import ge
 from turtle import st
-
+from unicodedata import decimal
+from sys import getsizeof
 
 class CompressedGene:
     def __init__(self, gene: str) -> None:
@@ -12,16 +13,18 @@ class CompressedGene:
         for nucleotide in gene.upper():
             # print(nucleotide)
             self.bit_string <<= 2
-            # print(self.bit_string)
             if nucleotide == "A":
                 self.bit_string |= 0b00
-                print(self.bit_string)
+                print(getsizeof(self.bit_string))
             elif nucleotide == "B":
                 self.bit_string |= 0b01
+                print(getsizeof(self.bit_string))
             elif nucleotide == "C":
                 self.bit_string |= 0b10
+                print(getsizeof(self.bit_string))
             elif nucleotide == "D":
                 self.bit_string |= 0b11
+                print(getsizeof(self.bit_string))
             else:
                 raise ValueError("Invalid Nucleotide:{}".format(nucleotide))
 
@@ -29,18 +32,15 @@ class CompressedGene:
         gene: str = ""
         for i in range(0, self.bit_string.bit_length() - 1, 2):
             bits: int = self.bit_string >> i & 0b11
+            # print(bits)
             if bits == 0b00:
                 gene += "A"
-                print(gene)
             elif bits == 0b01:
                 gene += "B"
-                print(gene)
             elif bits == 0b10:
                 gene += "C"
-                print(gene)
             elif bits == 0b11:
                 gene += "D"
-                print(gene)
             else:
                 raise ValueError("Invalid bits:{}".format(bits))
         return gene[::-1]
@@ -49,8 +49,7 @@ class CompressedGene:
         return self.decompress()
 
 if __name__ == "__main__":
-    from sys import getsizeof
-    original: str = "abcd"
+    original: str = "a"
     print("Original is {} bytes".format(getsizeof(original)))
     compressed: CompressedGene = CompressedGene(original)
     print("compressed is {} bytes".format(getsizeof(compressed.bit_string)))
