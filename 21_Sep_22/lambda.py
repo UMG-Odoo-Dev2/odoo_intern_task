@@ -6,7 +6,7 @@ list_A = [10,2,8,7,5,4,3,11,0, 1]
 list_B = map (lambda x: x*x, list_A) 
 print(list(list_B))                        #output=[100, 4, 64, 49, 25, 16, 9, 121, 0, 1]
 
-map_list=list(map (lambda x:x.upper(),["Python","Php","Odoo","JavaScript"]))
+map_list=list(map (lambda x:x.upper(),["Python","Php","Odoo","JavaScript"])) #IIFE
 print(map_list)                            #output=['PYTHON', 'PHP', 'ODOO', 'JAVASCRIPT']
 
 from functools import reduce

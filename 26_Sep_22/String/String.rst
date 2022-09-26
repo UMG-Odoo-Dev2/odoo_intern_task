@@ -1,0 +1,30 @@
+====================
+Mutuable & Inmutable
+====================
+* python တွင် variable တိုင်းမှာ object တစ်ခုစီ၏ instance ဆိုတာရှိတယ်။ 
+* python မှာ *Mutable object* နှင့်  *Immutable object* ဆိုပြီး နှစ်မျိုးရှိသည်။
+* Object တစ်ခုကို instantiate လုပ်တဲ့အခါတိုင်း၊ a unique object idတစ်ခု သတ်မှတ်ပေးပါတယ်။
+* Object ရဲ့ typeကို runtime တွင် definedသတ်မှတ်ထားပြီးနောက်မှ အဲ့ဒါကိုပြောင်းလို့ မရပါ။ ဒါပေမဲ့ အဲ့ဒီအခြေအနေကို ပြောင်းလဲနိုင်တယ်ဆိုရင် အဲ့ဒါကို mutable objectလို့ခေါ်တယ်။
+* *Mutable object များသည် သူတို့ရဲ့ state သို့ contentsတွေကို ပြောင်းလဲနိုင်ပြီး *Immutable object* များသည် သူတို့ရဲ့ state သို့ contentကို ပြောင်းလဲလို့ မရပါ။
+* *Immutable Objects* : 
+     * built-in types like *int, float, bool, string, unicode, tuple*.
+     * အရိုးရှင်းဆုံးပြောရမယ်ဆိုရင်၊ Immutable Objectတစ်ခုကို createdလုပ်ပြီးရင် ပြောင်းလဲလို့မရပါဘူး။
+* *Mutable Objects* : 
+     * *list, dict, set* . Custom classesတွေဟာ generallyအားဖြင့် mutableပြောင်းလဲနိုင်ပါတယ်။ 
+* .. Note::
+     We know that tuple in python is immutable. But, the tuple consists of a sequence of names with unchangeable bindings to objects.
+* ::
+    tup1 = ('apple', 'banana',[5,4,3,2,1])
+  
+    tup2 = ('apple', 'banana',[5,4,3,2,1])
+* In this tuple,a string and a list consist. Strings are immutable so we can’t change its value. But the contents of the list can change. The tuple itself isn’t mutable but contain items that are mutable.            
+* ::
+    print(tup1==tup2) ***#Output is True***
+
+    print(tup1 is tup2) ***#Output is False***
+
+    tup1[2].append(90)
+
+    print(tup1) ***#Output is ('apple', 'banana', [5, 4, 3, 2, 1, 90])***
+    
+    print(tup1==tup2) ***#Output is False***
