@@ -1,5 +1,5 @@
 ====================
-Mutuable & Inmutable
+Mutuable & Immutable
 ====================
 * python တွင် variable တိုင်းမှာ object တစ်ခုစီ၏ instance ဆိုတာရှိတယ်။ 
 * python မှာ *Mutable object* နှင့်  *Immutable object* ဆိုပြီး နှစ်မျိုးရှိသည်။
@@ -17,7 +17,8 @@ Mutuable & Inmutable
     tup1 = ('apple', 'banana',[5,4,3,2,1])
   
     tup2 = ('apple', 'banana',[5,4,3,2,1])
-* In this tuple,a string and a list consist. Strings are immutable so we can’t change its value. But the contents of the list can change. The tuple itself isn’t mutable but contain items that are mutable.            
+
+* ဒီ tuple မှာဆိုရင် string နှင့် list တစ်ခု ပါဝင်ပါသည်။ Stringsတွေက immutable ကဖြစ်သောကြောင့် can’t change its value သူရဲ့ value ကို မပြောင်းလဲနိုင်ပါဘူး။ ဒါပေမယ့် list ထဲမှာပါတဲ့ contents တွေက ပြောင်းလဲနိုင်ပါတယ်။ Tuple သည် သူကိုယ်တိုင်က မပြောင်းလဲနိုင်သော်လည်း ပြောင်းလဲနိုင်သော အရာများပါရှိတယ်။
 * ::
     print(tup1==tup2) ***#Output is True***
 

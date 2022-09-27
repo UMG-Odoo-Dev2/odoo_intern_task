@@ -25,8 +25,8 @@ lambda arguments: expression
 
 ## Using lambda() Function with filter()
 - filter() function takes in a function and a list as arguments.
-- The function is called with all the items in the list and a new list is returned which contains items for which the function evaluates to True.
-- Example:
+- ဒီfunctionက listထဲ မှာ itemsအားလုံးကို callခေါ်ပြီး အဲ့ဒီfunctionသည် True သို့ evaluatesလုပ်တဲ့ items များပါ၀င်သည့် new listအသစ်ကို return ပြန်ပေးတယ်။
+- Example: 
 ```
 my_list = [1, 5, 4, 6, 8, 11, 3, 12]
 new_list = list(filter(lambda x: (x%2 == 0) , my_list))
