@@ -8,7 +8,12 @@ with open("developer.json", "r") as read_file:
     print("Decod JSON Data From File")
     for key, value in developer.items():
         print(key, ":", value)
-    print("Done reading json file")
+    print("Done reading json file\n")
+
+    # employee_dict = json.loads(employee)
+    # print(employee_dict)
+    # print(type(employee_dict))
+    # print("\n")
 
 #Access JSON data directly using key name
 print("\nStarted Reading JSON file")
@@ -73,7 +78,7 @@ print("Experience: ", developerDict["experience"]["python"])
 
 print("Done reading nested JSON Array")
 
-#Serialization Example:
+#Serialization Example: json.dump() to encode and write JSON data to a file
 data = {
     "president": {
         "name": "Zaphod Beeblebrox",
@@ -82,6 +87,20 @@ data = {
 }
 with open("data_file.json", "w") as write_file:
     json.dump(data, write_file)
+
+
+#Serialization Example: Convert Python dictionary into a JSON formatted String by using json.dumps() 
+def SendJsonResponse(resultDict):
+    print("Convert Python dictionary into JSON formatted String")
+    developer_str = json.dumps(resultDict)
+    print(developer_str)
+developer_Dict = {
+    "name": "Jane Doe",
+    "salary": 9000,
+    "skills": ["Python", "Machine Learning", "Web Development"],
+    "email": "jane.doe@pynative.com"
+}       # sample developer dict
+SendJsonResponse(developer_Dict)
 
 
 # a Python object (dict):
