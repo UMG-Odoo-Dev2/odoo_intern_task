@@ -16,12 +16,18 @@ print("\nArgument List:",str(sys.argv))
 ```
 - In this program, the output is:
 ``` 
-This is the name of the program: argument.py (This is ***the name of the script***)
-
-Number of elements including the name of the program: 4 (Therefore no; of element is 4 because we write the list of command line arguments "***python argument.py 2 4 6***" ) (This is len(sys.argv))
-
-Number of elements excluding the name of the program: 3 (because (len(sys.argv)-1) )
-
+This is the name of the program: argument.py 
+```
+- This is ***the name of the script***
+```
+Number of elements including the name of the program: 4 
+```
+- Therefore no; of element is 4 because we write the list of command line arguments ***python argument.py 2 4 6***"  (This is len(sys.argv))
+```
+Number of elements excluding the name of the program: 3
+```
+- because of (len(sys.argv)-1) ) and then the output shows argument list as below:
+```
 Argument List: ['argument.py', '2', '4', '6']
 ```
 - Another Example:
@@ -37,7 +43,7 @@ for i in range(1, n):
 print ("the sum is :", add)
 ```
 - The output is:
-- In this program, the Argument List: ['argument.py', '2.4', '2.5', '2.6'] (***because we write the list of command line arguments "***python argument.py 2.4 2.5 2.6 ***" )
 ```
 the sum is : 7.5
 ```
+- In this program, the Argument List: ['argument.py', '2.4', '2.5', '2.6'] (***because we write the list of command line arguments "***python argument.py 2.4 2.5 2.6 ***" )

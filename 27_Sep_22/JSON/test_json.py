@@ -91,7 +91,7 @@ with open("data_file.json", "w") as write_file:
 
 #Serialization Example: Convert Python dictionary into a JSON formatted String by using json.dumps() 
 def SendJsonResponse(resultDict):
-    print("Convert Python dictionary into JSON formatted String")
+    print("\nConvert Python dictionary into JSON formatted String")
     developer_str = json.dumps(resultDict)
     print(developer_str)
 developer_Dict = {
