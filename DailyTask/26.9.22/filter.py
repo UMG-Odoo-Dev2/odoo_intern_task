@@ -1,7 +1,9 @@
-seq = [0, 1, 2, 3, 5, 8, 13]
-  
-result = filter(lambda x: x % 2 != 0, seq)
-print(list(result))
-  
-result = filter(lambda x: x % 2 == 0, seq)
-print(list(result))
+from cgi import print_environ
+
+
+a = "hello"
+print(id(a))
+b = a + "world"
+print(id(b))
+c = b.replace("h", "x")
+print(id(c))
