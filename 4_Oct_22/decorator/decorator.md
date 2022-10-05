@@ -5,7 +5,8 @@
 - ဆိုလိုတာက ၎င်းတို့သည် ***being passed as an argument*** argumentတစ်ခုအဖြစ် ဖြတ်သွားခြင်း၊ ***returned from a function*** functionတစ်ခုမှ returnပြန်ခြင်း၊ modifiedလုပ်ပြီး variableတစ်ခုကို assignedလုပ်ပေးခြင်း ကဲ့သို့သော လုပ်ဆောင်ချက်များကို supportပေးသည် ဟု ဆိုလိုသည်။
 
  ## Creating Decorators
- ```
+ 
+ ~~~Python
  def uppercase_decorator(function):
     def wrapper():
         func = function()
@@ -19,7 +20,7 @@ def say_hi():
 
 decorate = uppercase_decorator(say_hi)
 print(decorate())
-```
+~~~
 - In this program, our decorator function takes a function as an argument.
 - And then, define a function and pass it to our decorator.
 - We learned earlier that we could assign a function to a variable. 
@@ -33,7 +34,7 @@ print(decorate())
 - However, Python provides a much easier way for us to apply decorators. 
 - The @ symbol is used before the function that would be like to decorate. 
 
-```
+~~~Python
 @uppercase_decorator
 def say_hi():
     return 'hello there'
@@ -64,7 +65,8 @@ def num():
     return 10
  
 print(num())
-```
+~~~
+
 - Output:
 ```
 400
@@ -74,7 +76,7 @@ print(num())
 - However, the decorators will be applied in the order that we've called them.
 
 ## Accepting Arguments in Decorator Functions
-```
+~~~Python
 def hello_decorator(func):
     def inner1(*args, **kwargs):
          
@@ -100,22 +102,24 @@ a, b = 1, 2
  
 # getting the value through return of the function
 print("Sum =", sum_two_numbers(a, b))
-```
+~~~
+
 - Output:
-```
+~~~Python
 before Execution
 Inside the function
 after Execution
 Sum = 3
-```
+~~~
 - In this example, a keen difference in the parameters of the inner function may be noticed. 
 - The inner function takes the argument as *args and **kwargs which means that a tuple of positional arguments or a dictionary of keyword arguments can be passed of any length. 
 - This makes it a general decorator that can decorate a function having any number of arguments.
 
 ## Chaining Decorators
-- In simpler terms chaining decorators means decorating a function with multiple decorators.
+- Chaining decorators means decorating a function with multiple decorators.
 - Example:
-```
+
+~~~Python
 # code for testing decorator chaining
 def decor1(func):
     def inner():
@@ -135,7 +139,7 @@ def num():
     return 10
  
 print(num())
-```
+~~~
 Output:
 ```
 400
@@ -151,3 +155,34 @@ decor1(decor(num))
     - Logging
     - Measuring execution time
     - Synchronization
+
+## Decorator with parameters
+~~~Python
+def decorator(*args, **kwargs):
+    print("Inside decorator")
+     
+    def inner(func):
+        print("Inside inner function")
+        print("I like", kwargs['like'])
+        func()   
+    return inner
+ 
+@decorator(like = "geeksforgeeks")
+def my_func():
+    print("Inside actual function")
+~~~
+- Output:
+```
+Inside decorator
+Inside inner function
+I like Pineapple
+Inside actual function
+```
+- In this example,
+- Function can be assigned to a variable i.e they can be referenced.
+- Function can be passed as an argument to another function.
+- Function can be returned from a function 
+- Firstly, in this program, decorator function with parameter asssigned is used for another function's argument, first decorator function start to print result: "Inside decorator". 
+- And then, print the inner function's first result, "Inside inner function".
+-The second result of inner funcition with the assigned parameter of decorator is "I like Pineapple".
+- Finally,  the fun() is called to result for "Inside actual function".
