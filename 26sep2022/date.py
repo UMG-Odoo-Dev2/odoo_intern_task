@@ -15,6 +15,8 @@ date_format = workbook.add_format({'num_format':'mmmm d yyyy'})
 
 # Adjust the colum width
 worksheet.set_column(1, 1, 15)
+worksheet.set_column('B:B', 20)
+worksheet.set_column('C:C', 12)
 
 #Write some header data
 worksheet.write('A1', 'Name', bold)
@@ -36,7 +38,7 @@ for name, date_str, salary in (person):
     date = datetime.strptime(date_str, "%Y-%m-%d")
 
     worksheet.write(row, col,     name               )
-    worksheet.write(row, col + 1, date,   date_format)
+    worksheet.write_datetime(row, col + 1, date,   date_format)
     worksheet.write(row, col + 2, salary, money      )
     row += 1
 
