@@ -9,7 +9,11 @@
 - Eg. lists, sets, dictionaries, etc.
 - Immutable: an object doesn't allow any change once it has been created
 - Eg. numbers (integer, float, etc.), strings, tuples, etc.
+<<<<<<< HEAD
 ```py
+=======
+```
+>>>>>>> 0c915ca04e9305325e7bfae7d98aa8e46be9f264
 string="Where are you from?"
 
 print("Original String: ")
@@ -40,7 +44,11 @@ print(type(re_string),"\n")
  - ID of these strings are different.
  - Original string cannot be changed because a string object is immutable.
 
+<<<<<<< HEAD
  ```py
+=======
+ ```
+>>>>>>> 0c915ca04e9305325e7bfae7d98aa8e46be9f264
  my_list=[1,2,3,4,5,6,7,8]
  sec_list=[9,10]
  
