@@ -81,6 +81,7 @@ print(list(lodd_list))
     - Like map and filter it takes two parameters, a function and an iterable.
     - However, it does not return another iterable, instead it returns a single value.
 ```
+
 reduce:
 [
     a       

@@ -14,7 +14,7 @@ speak=say
 print(speak("Hi"))
 
 
-#____________Passing function as an argument___________
+#____________Passing function as an argument____________
 def tell(greeting):
     return greeting.upper()
 
