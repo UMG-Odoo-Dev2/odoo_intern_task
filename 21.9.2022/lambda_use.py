@@ -28,3 +28,23 @@ print(newlist)
 mylist=[1,2,3,4,5,6,7,8]
 newlist=list(map(lambda x:x*x,mylist))
 print(newlist)
+
+name="What is your name?"
+print(lambda name:print(name)) 
+
+(lambda name:print(name))(name)
+
+def regu_fun(funct,*args):
+    #print(type(*args))
+    funct(*args)
+def print_one(arg):
+    return print(arg)
+def print_two(arg):
+    return print(arg)
+
+
+regu_fun(print_one,"Print 1 Regular Call")
+regu_fun(print_two,"Print 2 Regular Call")
+
+regu_fun(lambda:print_one("Print 1 Lambda Call"))
+regu_fun(lambda:print_two("Print 2 Lambda Call"))

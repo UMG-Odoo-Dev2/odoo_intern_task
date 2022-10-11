@@ -38,7 +38,7 @@ Lambda
 
   >>> from functools import reduce
   >>> my_list=[1,2,3,4,5,6,7,8,9,10]
-  >>> new_list=list(reduce(lambda x,y:x*y,my_list))
-  >>> print(new_list)
+  >>> reduced=list(reduce(lambda x,y:x*y,my_list))
+  >>> print(reduced)
 
 * Do not write complicated lambda functions in a production environment because it will be difficult for code-maintainers.
